@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Download Vimeo videos when the creator has enabled downloading." />
+    <title>Vimeo Download Helper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <nav><a class="brand" href="/">Vimeo<span>Fetch</span></a><a id="account-link" class="nav-note" href="/auth/vimeo">Connect Vimeo</a></nav>
+      <section class="hero">
+        <p class="eyebrow">SIMPLE · SECURE · CREATOR-RESPECTFUL</p>
+        <h1>Get the videos<br />you’re allowed to keep.</h1>
+        <p class="lead">Paste a Vimeo link to see downloads the video owner has enabled.</p>
+        <form id="video-form" novalidate>
+          <label class="sr-only" for="url">Vimeo video URL</label>
+          <input id="url" name="url" type="url" placeholder="https://vimeo.com/…" autocomplete="url" required />
+          <button type="submit">Find downloads <span>→</span></button>
+        </form>
+        <p class="terms">By continuing, you confirm you have permission to download this video.</p>
+      </section>
+      <section id="result" class="result" aria-live="polite" hidden></section>
+      <section class="how"><div><b>01</b><h2>Paste a Vimeo link</h2><p>Works with public and unlisted Vimeo video URLs.</p></div><div><b>02</b><h2>Choose the quality</h2><p>We show only the download options made available by the creator.</p></div><div><b>03</b><h2>Save the video</h2><p>Your download opens directly from Vimeo.</p></div></section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
